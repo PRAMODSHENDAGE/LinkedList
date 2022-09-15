@@ -33,6 +33,27 @@ namespace LinkedListProblem
             this.top = node;
             Console.WriteLine("{0} pushed to queue", value);
         }
+        ///<summary>
+        ///UC-13
+        ///Dequeue Element
+        ///</summary>
+        ///<returns></returns>
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty, Deletion is not Possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("value Dequeue is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
         internal void Display()
         {
             Node temp = this.top;
