@@ -117,6 +117,29 @@ namespace LinkedListProblem
             }
             return node;
         }
+        ///<summary>
+        ///UC-6
+        ///Delete the last element from Linedlist.
+        ///</summary>
+        ///<returns></returns>
+        public Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+                return null;
+            }
+            else
+            {
+                Node n = head;
+                while (n.next.next != null)
+                {
+                    n = n.next;
+                }
+                n.next = null;
+                return n;
+            }
+        }
         internal void Display()            
         {
             Node temp = this.head;
