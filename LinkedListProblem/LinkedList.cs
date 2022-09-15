@@ -31,6 +31,24 @@ namespace LinkedListProblem
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+        ///<summary>
+        ///UC-2
+        ///</summary>
+        ///Adding Element in Reverse Order in LinkedList
+        internal void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;//70
+                head = newNode;//30
+                head.next = temp;//70->30
+            }
+        }
         internal void Display()            
         {
             Node temp = this.head;
