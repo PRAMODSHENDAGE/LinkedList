@@ -99,6 +99,24 @@ namespace LinkedListProblem
                 }
             }
         }
+        ///<summary>
+        ///UC-5
+        ///Delete the first element from Linedlist.
+        ///</summary>
+        ///<returns></returns>
+        public Node PopFirst()
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return node;
+        }
         internal void Display()            
         {
             Node temp = this.head;
