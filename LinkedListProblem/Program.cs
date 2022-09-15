@@ -4,7 +4,7 @@ LinkedList list = new LinkedList();
 bool flag = true;
 while (flag)
 {
-    Console.WriteLine("Select Program\n 1.Create LinkedList\n 2.Add Element in Reverse Order\n 3.Append Element in LinkedList\n 4.Insert Element At Particular Position\n 5.Delete First Element In LinkedList\n 6.Delete Last Element In LinkedList");
+    Console.WriteLine("Select Program\n 1.Create LinkedList\n 2.Add Element in Reverse Order\n 3.Append Element in LinkedList\n 4.Insert Element At Particular Position\n 5.Delete First Element In LinkedList\n 6.Delete Last Element In LinkedList\n 7.Search Element In LinkedList");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -49,6 +49,14 @@ while (flag)
             list.Add(30);
             list.Add(70);
             list.PopLast();
+            list.Display();
+            break;
+
+        case 7:
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            list.Search(56);
             list.Display();
             break;
     }

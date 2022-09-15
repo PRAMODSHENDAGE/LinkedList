@@ -140,6 +140,30 @@ namespace LinkedListProblem
                 return n;
             }
         }
+        ///<summary>
+        ///UC-7
+        ///Search element from Linkedlist.
+        ///</summary>
+        ///<returns></returns>
+        public int Search(int data)
+        {
+            int count = 1;
+            Node temp = head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return count;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return 0;
+        }
         internal void Display()            
         {
             Node temp = this.head;
