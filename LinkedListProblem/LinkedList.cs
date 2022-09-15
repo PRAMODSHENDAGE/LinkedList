@@ -49,6 +49,28 @@ namespace LinkedListProblem
                 head.next = temp;//70->30
             }
         }
+        ///<summary>
+        //UC3
+        ///</summary>
+        //Append the LinkedList
+        public void Append(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node node1 = head;
+                while (node1.next != null)
+                {
+                    node1 = node1.next;
+                }
+                node1.next = node;
+            }
+            Console.WriteLine("{0} appended into linked list", node.data);
+        }
         internal void Display()            
         {
             Node temp = this.head;
