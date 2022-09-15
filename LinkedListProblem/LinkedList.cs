@@ -71,6 +71,34 @@ namespace LinkedListProblem
             }
             Console.WriteLine("{0} appended into linked list", node.data);
         }
+        ///<summary>
+        ///UC-4
+        ///Inserting Element At Particular Position.
+        ///</summary>
+        ///<param name="position">The position.</param>
+        ///<param name="data">The data.</param>
+        internal void InsertAtGivenPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    temp.next = node;
+                }
+            }
+        }
         internal void Display()            
         {
             Node temp = this.head;
